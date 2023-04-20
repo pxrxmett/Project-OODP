@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class Reservation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm");
 
-        System.out.print("Enter number of tables: ");
+        System.out.print(" type some numbers : ");
         int numTables = scanner.nextInt();
         BookingTable bookingTable = new BookingTable(numTables);
-
+  
         while (true) {
             System.out.println("Choose an option:");
             System.out.println("1. Add booking");
             System.out.println("2. Remove booking");
             System.out.println("3. Display bookings");
             System.out.println("4. Exit");
+            
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -32,6 +33,12 @@ public class Reservation {
 
                     System.out.print("Enter date and time (yyyy-MM-dd HH:mm): ");
                     LocalDateTime dateTime = LocalDateTime.parse(scanner.nextLine(), formatter);
+
+
+                    System.out.println(" Booking details : "  );
+                    System.out.println( "Name: "  + name);
+                    System.out.println("Date: " + dateTime);
+
 
                     try {
                         bookingTable.addBooking(tableNumber, name, dateTime);
@@ -60,10 +67,11 @@ public class Reservation {
 
                 case 4:
                     System.exit(0);
-
+         
                 default:
                     System.out.println("Invalid choice");
             }
+            scanner.close();
         }
     }
 }

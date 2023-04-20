@@ -34,4 +34,8 @@ public class Booking {
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
+
+    public int isConfirmed() {
+        return 0;
+    }
 }
