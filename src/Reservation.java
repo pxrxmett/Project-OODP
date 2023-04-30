@@ -65,6 +65,7 @@ public class Reservation {
 
                     try {
                         bookingTable.removeBooking(tableNumberToRemove);
+                        System.out.println(" Table : " + tableNumberToRemove );
                         System.out.println("Booking removed successfully");
                     } catch (IllegalArgumentException e) {
                         System.out.println("Error: " + e.getMessage());
