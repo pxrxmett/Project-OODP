@@ -11,6 +11,7 @@ public class Reservation {
         System.out.println("Only staff can enter the numbers of tables");
         System.out.print("Enter number of tables : ");
         
+        
         int numTables = scanner.nextInt();
         BookingTable bookingTable = new BookingTable(numTables);
 
@@ -43,6 +44,7 @@ public class Reservation {
                     System.out.println("================");
                     System.out.println("Booking details:");
                     System.out.println("Name: " + name);
+                    System.out.println("Table : " + tableNumber );
                     System.out.println("Date: " + dateTime);
                     System.out.println("Number of people: " + peopleNumber);
 
